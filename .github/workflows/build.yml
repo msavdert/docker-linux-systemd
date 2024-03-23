@@ -47,7 +47,7 @@ jobs:
           file: ubuntu/20.04/Dockerfile
           push: true
           platforms: linux/amd64,linux/arm64
-          tags: melihsavdert/docker-ubuntu-systemd:20.04,melihsavdert/docker-ubuntu-systemd:focal
+          tags: melihsavdert/docker-ubuntu-systemd:20.04,melihsavdert/docker-ubuntu-systemd:20.04-focal
       -
         name: Build and push
         uses: docker/build-push-action@v5
@@ -56,4 +56,4 @@ jobs:
           file: ubuntu/22.04/Dockerfile
           push: true
           platforms: linux/amd64,linux/arm64
-          tags: melihsavdert/docker-ubuntu-systemd:latest,melihsavdert/docker-ubuntu-systemd:22.04,melihsavdert/docker-ubuntu-systemd:jammy
+          tags: melihsavdert/docker-ubuntu-systemd:latest,melihsavdert/docker-ubuntu-systemd:22.04,melihsavdert/docker-ubuntu-systemd:22.04-jammy
