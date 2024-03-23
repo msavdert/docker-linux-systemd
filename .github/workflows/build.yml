@@ -39,3 +39,21 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm64
           tags: melihsavdert/docker-rockylinux-systemd:latest,melihsavdert/docker-rockylinux-systemd:9
+      -
+        name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ubuntu/20.04/Dockerfile
+          push: true
+          platforms: linux/amd64,linux/arm64
+          tags: melihsavdert/docker-ubuntu-systemd:20.04,melihsavdert/docker-ubuntu-systemd:focal
+      -
+        name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ubuntu/22.04/Dockerfile
+          push: true
+          platforms: linux/amd64,linux/arm64
+          tags: melihsavdert/docker-ubuntu-systemd:latest,melihsavdert/docker-ubuntu-systemd:22.04,melihsavdert/docker-ubuntu-systemd:jammy
