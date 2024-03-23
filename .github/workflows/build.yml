@@ -28,7 +28,7 @@ jobs:
           context: .
           file: rockylinux/8/Dockerfile
           push: true
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64,linux/arm64,linux/arm/v6,linux/arm/v7
           tags: melihsavdert/docker-rockylinux-systemd:8
       -
         name: Build and push
@@ -37,8 +37,35 @@ jobs:
           context: .
           file: rockylinux/9/Dockerfile
           push: true
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64,linux/arm64,linux/arm/v6,linux/arm/v7
           tags: melihsavdert/docker-rockylinux-systemd:latest,melihsavdert/docker-rockylinux-systemd:9
+      -
+        name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: oraclelinux/7/Dockerfile
+          push: true
+          platforms: linux/amd64,linux/arm64,linux/arm/v6,linux/arm/v7
+          tags: melihsavdert/docker-oraclelinux-systemd:7
+      -
+        name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: oraclelinux/8/Dockerfile
+          push: true
+          platforms: linux/amd64,linux/arm64,linux/arm/v6,linux/arm/v7
+          tags: melihsavdert/docker-oraclelinux-systemd:8
+      -
+        name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: oraclelinux/9/Dockerfile
+          push: true
+          platforms: linux/amd64,linux/arm64,linux/arm/v6,linux/arm/v7
+          tags: melihsavdert/docker-oraclelinux-systemd:9,melihsavdert/docker-oraclelinux-systemd:latest
       -
         name: Build and push
         uses: docker/build-push-action@v5
@@ -46,7 +73,7 @@ jobs:
           context: .
           file: ubuntu/20.04/Dockerfile
           push: true
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64,linux/arm64,linux/arm/v6,linux/arm/v7
           tags: melihsavdert/docker-ubuntu-systemd:20.04,melihsavdert/docker-ubuntu-systemd:20.04-focal
       -
         name: Build and push
@@ -55,5 +82,5 @@ jobs:
           context: .
           file: ubuntu/22.04/Dockerfile
           push: true
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64,linux/arm64,linux/arm/v6,linux/arm/v7
           tags: melihsavdert/docker-ubuntu-systemd:latest,melihsavdert/docker-ubuntu-systemd:22.04,melihsavdert/docker-ubuntu-systemd:22.04-jammy
