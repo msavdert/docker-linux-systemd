@@ -6,20 +6,21 @@ This docker images can build containers capable to use systemd.
 
 ## Tags
 
-### Rocky Linux - melihsavdert/docker-rockylinux-systemd
+### Rocky Linux - melihsavdert/rockylinux-systemd
 
   - `9`, `latest`
   - `8`
 
-### Oracle Linux - melihsavdert/docker-oraclelinux-systemd
+### Oracle Linux - melihsavdert/oraclelinux-systemd
 
   - `9`, `latest`
   - `8`
   - `7`
 
-### Ubuntu - melihsavdert/docker-ubuntu-systemd
+### Ubuntu - melihsavdert/ubuntu-systemd
 
-  - `22.04`, `jammy`, `latest`
+  - `24.04`, `noble`, `latest`
+  - `22.04`, `jammy`
   - `20.04`, `focal`
 
 ## How to Use
@@ -30,7 +31,18 @@ docker run \
   --detach \
   --volume=/sys/fs/cgroup:/sys/fs/cgroup:rw \
   --cgroupns=host \
-  melihsavdert/docker-oraclelinux-systemd:latest
+  melihsavdert/oraclelinux-systemd:latest
+```
+
+OR
+
+```
+docker run \
+  --privileged \
+  --detach \
+  --volume=/sys/fs/cgroup:/sys/fs/cgroup:rw \
+  --cgroupns=host \
+  melihsavdert/ubuntu-systemd:noble
 ```
 
 ## Author

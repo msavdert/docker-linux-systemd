@@ -4,6 +4,7 @@ LABEL maintainer="Melih Savdert"
 
 ENV container=docker
 
+RUN dnf -y update
 RUN dnf -y reinstall systemd
 RUN cd /etc/systemd/system/sysinit.target.wants/ ; \
     for i in * ; do [ $i = systemd-tmpfiles-setup.service ] || rm -f $i ; done ; \
