@@ -19,8 +19,9 @@ This docker images can build containers capable to use systemd.
 
 ### Ubuntu - melihsavdert/docker-ubuntu-systemd
 
-  - `22.04`, `jammy`, `latest`
-  - `20.04`, `focal`
+  - `24.04`, `24.04-noble`, `noble`, `latest`
+  - `22.04`, `22.04-jammy`, `jammy`
+  - `20.04`, `20.04-focal`, `focal`
 
 ## How to Use
 
@@ -31,6 +32,17 @@ docker run \
   --volume=/sys/fs/cgroup:/sys/fs/cgroup:rw \
   --cgroupns=host \
   melihsavdert/docker-oraclelinux-systemd:latest
+```
+
+OR
+
+```
+docker run \
+  --privileged \
+  --detach \
+  --volume=/sys/fs/cgroup:/sys/fs/cgroup:rw \
+  --cgroupns=host \
+  melihsavdert/docker-ubuntu-systemd:noble
 ```
 
 ## Author
