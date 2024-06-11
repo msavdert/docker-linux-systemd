@@ -19,9 +19,9 @@ This docker images can build containers capable to use systemd.
 
 ### Ubuntu - melihsavdert/ubuntu-systemd
 
-  - `24.04`, `24.04-noble`, `noble`, `latest`
-  - `22.04`, `22.04-jammy`, `jammy`
-  - `20.04`, `20.04-focal`, `focal`
+  - `24.04`, `noble`, `latest`
+  - `22.04`, `jammy`
+  - `20.04`, `focal`
 
 ## How to Use
 
