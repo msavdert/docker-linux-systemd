@@ -74,7 +74,7 @@ jobs:
           file: ubuntu/20.04/Dockerfile
           push: true
           platforms: linux/amd64,linux/arm64
-          tags: melihsavdert/ubuntu-systemd:20.04,melihsavdert/ubuntu-systemd:20.04-focal,melihsavdert/ubuntu-systemd:focal
+          tags: melihsavdert/ubuntu-systemd:20.04,melihsavdert/ubuntu-systemd:focal
       -
         name: Build and push Ubuntu 22.04
         uses: docker/build-push-action@v5
@@ -83,7 +83,7 @@ jobs:
           file: ubuntu/22.04/Dockerfile
           push: true
           platforms: linux/amd64,linux/arm64
-          tags: melihsavdert/ubuntu-systemd:22.04,melihsavdert/ubuntu-systemd:22.04-jammy,melihsavdert/ubuntu-systemd:jammy
+          tags: melihsavdert/ubuntu-systemd:22.04,melihsavdert/ubuntu-systemd:jammy
       -
         name: Build and push Ubuntu 24.04
         uses: docker/build-push-action@v5
@@ -92,4 +92,4 @@ jobs:
           file: ubuntu/24.04/Dockerfile
           push: true
           platforms: linux/amd64,linux/arm64
-          tags: melihsavdert/ubuntu-systemd:latest,melihsavdert/ubuntu-systemd:24.04,melihsavdert/ubuntu-systemd:24.04-noble,melihsavdert/ubuntu-systemd:noble
+          tags: melihsavdert/ubuntu-systemd:latest,melihsavdert/ubuntu-systemd:24.04,melihsavdert/ubuntu-systemd:noble
