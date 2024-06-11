@@ -1,8 +1,13 @@
 FROM rockylinux:9
+
+LABEL maintainer="Melih Savdert"
+
 ENV container docker
 # see https://hub.docker.com/_/rockylinux
 # RockyLinux:9 missing /usr/sbin/init -> ../lib/systemd/systemd
 #  see https://github.com/rocky-linux/sig-cloud-instance-images/issues/39
+
+RUN dnf -y update
 RUN [ ! -f /usr/sbin/init ] && dnf -y install systemd;
 RUN ([ -d /lib/systemd/system/sysinit.target.wants ] && cd /lib/systemd/system/sysinit.target.wants/ && for i in *; do [ $i == \
 systemd-tmpfiles-setup.service ] || rm -f $i; done); \
