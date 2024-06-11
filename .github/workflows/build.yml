@@ -22,7 +22,7 @@ jobs:
         name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
       -
-        name: Build and push
+        name: Build and push Rocky Linux 8
         uses: docker/build-push-action@v5
         with:
           context: .
@@ -31,7 +31,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           tags: melihsavdert/docker-rockylinux-systemd:8
       -
-        name: Build and push
+        name: Build and push Rocky Linux 9
         uses: docker/build-push-action@v5
         with:
           context: .
@@ -40,7 +40,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           tags: melihsavdert/docker-rockylinux-systemd:latest,melihsavdert/docker-rockylinux-systemd:9
       -
-        name: Build and push
+        name: Build and push Oracle Linux 7
         uses: docker/build-push-action@v5
         with:
           context: .
@@ -49,7 +49,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           tags: melihsavdert/docker-oraclelinux-systemd:7
       -
-        name: Build and push
+        name: Build and push Oracle Linux 8
         uses: docker/build-push-action@v5
         with:
           context: .
@@ -58,7 +58,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           tags: melihsavdert/docker-oraclelinux-systemd:8
       -
-        name: Build and push
+        name: Build and push Oracle Linux 9
         uses: docker/build-push-action@v5
         with:
           context: .
@@ -67,7 +67,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           tags: melihsavdert/docker-oraclelinux-systemd:9,melihsavdert/docker-oraclelinux-systemd:latest
       -
-        name: Build and push
+        name: Build and push Ubuntu 20.04
         uses: docker/build-push-action@v5
         with:
           context: .
@@ -76,11 +76,20 @@ jobs:
           platforms: linux/amd64,linux/arm64
           tags: melihsavdert/docker-ubuntu-systemd:20.04,melihsavdert/docker-ubuntu-systemd:20.04-focal
       -
-        name: Build and push
+        name: Build and push Ubuntu 22.04
         uses: docker/build-push-action@v5
         with:
           context: .
           file: ubuntu/22.04/Dockerfile
           push: true
           platforms: linux/amd64,linux/arm64
-          tags: melihsavdert/docker-ubuntu-systemd:latest,melihsavdert/docker-ubuntu-systemd:22.04,melihsavdert/docker-ubuntu-systemd:22.04-jammy
+          tags: melihsavdert/docker-ubuntu-systemd:22.04,melihsavdert/docker-ubuntu-systemd:22.04-jammy,melihsavdert/docker-ubuntu-systemd:jammy
+      -
+        name: Build and push Ubuntu 24.04
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ubuntu/24.04/Dockerfile
+          push: true
+          platforms: linux/amd64,linux/arm64
+          tags: melihsavdert/docker-ubuntu-systemd:latest,melihsavdert/docker-ubuntu-systemd:24.04,melihsavdert/docker-ubuntu-systemd:24.04-noble,melihsavdert/docker-ubuntu-systemd:noble
