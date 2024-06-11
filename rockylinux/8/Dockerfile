@@ -1,6 +1,11 @@
 FROM rockylinux:8
+
+LABEL maintainer="Melih Savdert"
+
 ENV container docker
 # see https://hub.docker.com/_/rockylinux
+
+RUN dnf -y update
 RUN (cd /lib/systemd/system/sysinit.target.wants/; for i in *; do [ $i == \
 systemd-tmpfiles-setup.service ] || rm -f $i; done); \
 rm -f /lib/systemd/system/multi-user.target.wants/*;\
