@@ -1,5 +1,5 @@
 FROM ubuntu:20.04
-LABEL maintainer="Enio Carboni"
+LABEL maintainer="Melih Savdert"
 
 ARG DEBIAN_FRONTEND=noninteractive
 
